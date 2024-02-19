@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<!--Colors available: aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, purple, red, silver, teal, white, and yellow or rgb(x,y,z)-->
+
+<head>
+  <!--Used only for metadata; body contains actual data-->
+  <html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Good for mobile-->
+  <title>Text Trimmer | Featherworks</title>
+  <!--CSS (Cascading Style Sheets) Specifications-->
+  <style>
+    body {
+      text-align: center;
+      /*font-style: oblique -90deg;*/
+      font-family: Georgia, serif;
+      background-color: rgb(100, 100, 100);
+      color: floralwhite;
+      font-size: 1.6em;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 5px;
+      background-color: #333;
+      color: #eadfa3;
+    }
+
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    textarea {
+      font-size: 0.6em;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', monospace;
+      width: 65%;
+    }
+
+    button {
+      font-size: 0.75em;
+    }
+  </style>
+</head>
+
+<!--<body style="background-color:rgb(100, 100, 100); font-size:26px">--> <!--dark gray-->
+
+<body>
+  <header>
+    <h1 title="Did you know owls bob their heads to improve their depth perception?">Text Trimmer</h1>
+  </header>
+  <br>
+
+  <label for="process_me" title="Instructions">Enter a chat log of a particular format to have extraneous text cleaned.</label><br><br>
+  <button type="button" onclick="fillWithExample()">See an Example</button><br>
+  <!--title means tooltip-->
+  <textarea name="process_me" id="process_me" rows="6" style="overflow:auto;" wrap="soft"></textarea><br>
+  <!--Value between <textarea> and </textarea> is default value-->
+
+  <button type="button" onclick="cleanLog()">v Convert! v</button><br>
+
+  <textarea name="output" id="output" rows="6" style="overflow:auto;" wrap="soft"></textarea><br>
+
+  <p id="After-Instructions"></p>
+</body>
+
+<script src="text_trimmer_functions.js"></script>
+
+</html>
